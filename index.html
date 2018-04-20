@@ -8,11 +8,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
-    <title>Hello, world!</title>
+    <title>DotNet PreWork - Coding Temple</title>
   </head>
   <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">DotNet Prework</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,54 +20,472 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+      
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
       <main class="container">
-          
-          
-    <h1>Hello, world!</h1>
+          <div class="row">
+              <div class="col">
+              <h1>Getting Started</h1>
+                  <p>Welcome	to	Coding	Temple’s 10-week .NET Core bootcamp. The following are the instructions to begin your journey in becoming a developer.</p>
+                  <ol>
+                      <li><a href="https://codingtemplechicago.slack.com/">Join	Slack</a></li>
+                      <li>Begin watching the Begining C# course on Microsoft's Virtual Academy: <a href="https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169">https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169</a></li>
+                      <li>Work through the assignments below.  If you have questions about the assignment, you may message the instructor on Slack.</li>
+                     
+                  </ol>
+                  <h2>Additional Resources</h2>
+                  <ul>
+                      <li><a href="https://www.microsoft.com/net/learn/in-browser-tutorial/1">https://www.microsoft.com/net/learn/in-browser-tutorial/1</a></li>
+                      <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/">https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/</a></li>
+                      <li><a href="https://www.tutorialspoint.com/csharp/index.htm">https://www.tutorialspoint.com/csharp/index.htm</a></li>
+                  </ul>
+                  <h2>Videos to Watch - Week 1</h2>
+                  <ol>
+                      <li>Course Introduction</li>
+                      <li>Creating	Your	First	C#	Program</li>
+                      <li>Understanding	Your	First	C#	Program</li>
+                      <li>Working	with	Code	Files,	Projects,	and	Solutions</li>
+                      <li>Understanding	Data	Types	and	Variables</li>
+                      <li>The	if	Decision	Statement</li>
+                      <li>Operators,	Expressions,	and	Statements</li>
+                      <li>For	Iteration	Statement</li>
+                  </ol>
+                  <h2>Problems - Week 1</h2>
+                  <h3>Problem 1</h3>
+                  <p>Create	a basic	C# console application that prints the text	"Hello	World" to the screen when run.</p>
+                  <h3>Problem 2</h3>
+                  <p>Write	a	C#	program	to	print	the	result	of	dividing	24	into	5	on	screen.</p>
+                  <h3>Problem 3</h3>
+                  <p>Write a C# program	to	print	on	screen	the	result	of	adding,	subtracting,	multiplying	and	dividing	two	numbers	typed	by	the	user.	The	remainder	of	the	division	must	be	displayed,	too.</p>
+                  <code>
+                      Enter	a	number:	12<br>		
+                      Enter	another	number:	3<br>
+                      12	+	3	=	15<br>		
+                      12	-3	=	9<br>
+                      12	x	3	=	36<br>
+                      12	/	3	=	4<br>
+                      12	mod	3	=	0<br>
+                  </code>
+                  <p>Convert input (which	will	always	be	a	string)	to	integer	with	the	following:</p>
+                  <code>
+                      string	number	=	Console.ReadLine(); <br>
+                      int	num	=	Convert.ToInt32(number);<br>
+                  </code>
+                  <h3>Problem 4</h3>
+                  <p>Write	a	C#	program	to	calculate	and	display	the	average	of	four	numbers	entered	by	the	user.</p>
+                  <h3>Problem 5</h3>
+                  <p>
+                      Write	a	C#	program	to	get	a	number	from	the	user	and	answer	whether	it	is	positive	or	negative.
+                  </p>
+                  <h3>Problem 6</h3>
+                  <p>
+                      Create	a	program	which	assigns	a	integer	variable	"amountOfPositives"	the	value	0,	1	or	2,	depending	on	the	values	of	two	numbers	a	&amp;	b	(entered	by	the	user).	For	example,	if	the	user	enters	3	and	-2	seperately,	it	will	assign	1	to	amountofPostives	since	there	was	only	one	postive	number	out	of	the	two	entered	by	the	user.				
+                  </p>
+                  <h3>Problem 7</h3>
+                  <p>
+                      Write	a	program	that	takes	a	number	from	the	user	and	prints:	
+                      
+                  </p>
+                  <ul>
+                          <li>"fizz"	if	it	is	divisible	by	3</li>
+                          <li>"buzz"	if	it	is	divisible	by	5</li>
+                          <li>"fizz	buzz"	if	it	is	divisible	by	3	and	5</li>
+                  </ul>
+                  <h3>Problem 8</h3>
+                  <p>Write a C#	program	to get three numbers from the user and display the greatest one.</p>
+                  <h3>Problem 9</h3>
+                  <p>Write	a	program	that	asks	for	1	input,	a	number	score	(which	will	be	anywhere	between	0-100).	It	will	then	print	out	the	grade	(either	"A",	"B",	"C",	"D",	or	"F")	associated	with	that	number.	e.g.	"A"	will	be	printed	if	the	number	entered	was	93.
+                  </p>
+                  <h3>Problem 10</h3>
+                  <p>
+                      Write	a	program	that	takes	an	input	that	is	number,	and	will	output	all	the	numbers	between	that	number	and	0,	one	by	one.
+                  </p>
+                  <h3>Problem 11</h3>
+                  <p>
+                      Write	 a	 program,	 which	 asks	 for	 a	 character	 and	 a	 width,	 and	 displays	 a	square	 of	 that	 width,	 using	 that	 number	 for	 the	 inner	 symbol,	 as	 in	 this	Example:			
+                  </p>
+                  <code>
+                      Enter	a	character:	z<br>		
+                      Enter	the	desired	width:	3<br>
+                      zzz<br>
+                      zzz<br>
+                      zzz<br>
+                  </code>
+                  <h3>Problem 12</h3>
+                  <p>Print	all	the	odd	numbers	from	1	to	a	user	specifiable	upper	limit	(inclusive).  Example:</p>
+                  <code>
+                      Please	enter	a	number:	9<br>
+                      1	3	5	7	9<br>
+                  </code>
+                  <h3>Problem 13</h3>
+                  <p>
+                      Let's	build	upon	problem	7.	Have	the	program	do	the	same	thing	except	loop	through	from	range	of	1	to	n,	printing	fizz	buzz.	If	the	number	in	the	range	is	not	divisble	by	3	or	5,	then	just	print	the	number.			Example:	
+                  </p>
+                  <code>
+                      Enter	a	number:	16<br>
+                      16<br>	
+                      fizz<br>	
+                      buzz<br>	
+                      14<br>	
+                      13<br>	
+                      fizz<br>	
+                      11<br>	
+                      buzz<br>	
+                      fizz<br>
+                      8<br>
+                      7<br>
+                      fizz<br>
+                      buzz<br>
+                      4<br>
+                      fizz<br>
+                      2<br>
+                      1<br>
+                  </code>
+                  <h3>Problem 14</h3>
+                  <p>
+                      Given	an	array with	values,	print	the	sum	of	the	elements of	that array.				
+                  </p>
+                  <code>
+                      int[]	numbers	=	{1,2,3,4,5}; //	it	should	print	out:	15
+                  </code>
+                  <h3>Problem 15</h3>
+                  <p>Given	an	array	with	values,	print	out	every	odd	indexed	element.</p>
+                  <code>
+                      int[]	numbers	=	{1,4,2,6,5,8}; //it should print out 4 6 8
+                  </code>
+                  <h3>Problem 16</h3>
+                  <p>Given	an	even	sized	array,	determine	if	the	sum	of	the	first	half	elements	equal	the	sum	of	the	second	half.</p>
+                  <code>
+                      int[]	array	=	{1,2,3,2,2,2}; //true: 1	+	2	+	3	is	equal	to	2	+	2	+	2	
+                  </code>
+                  <h2>Videos to Watch - Week 2 : Part 1</h2>
+                  <ol>
+                      <li>Understanding	Arrays</li>
+                      <li>Creating	and	Calling	Methods</li>
+                      <li>While	Iterations	statement</li>
+                      <li>Working	with	Strings</li>
+                      <li>Working	with	Date	and	time</li>
+                      <li>Understanding	Classes</li>
+                      <li>More	About	Classes	and	Methods</li>
+                  </ol>
+                  <h2>Problems - Week 2 : Part 1</h2>
+                  <p>
+                      For	problems	1	to	7,	you	will	write	a	method	within	a	class	called	program	and	call those	methods	with	predetermined	values	within	the	main	function.	e.g.
+                  </p>
+                  <code>
+                      <pre>
+using System;
+
+namespace MyProgram	
+{
+    public class Program	
+    {	
+        static void Main(string[] args)
+        {
+            string	value = MyMethod();//	You	will call the method in main
+            Console.WriteLine(value);	
+        }	
+
+        //You will define the method in the class. 
+        //For now, it doesn't matter if it is public or private
+
+        private static string MyMethod()
+        {
+            return "Hello World!";
+        }
+    }	
+}
+                      </pre>
+                  </code>
+                  <h3>Problem 1</h3>
+                  <p>
+                      Write	a	function	that	takes	2	integers	as	its	parameters	(arguments)	and	returns	(not print)	the	sum	of	them.	Here	is	template:
+                  </p>
+                  <code>
+                      <pre>
+public class Program	
+{	
+    static void Main(string[] args)
+    {
+        int number = Sum(2,3);	
+        Console.WriteLine(number);	
+        Console.ReadLine();
+    }	
+
+    public static int Sum(int a, int b)
+    {
+        //code goes here
+    }
+}	
+                      </pre>
+                  </code>
+                  <h3>Problem 2</h3>
+                  <p>Write	a	method	that	takes	2	strings	and	returns	a	boolean	value	depending	on	whether	they	are	equal	or	not.</p>
+                  <h3>Problem 3
+                  </h3>
+                  <p>
+                      Write	a	method	that	takes	one	string	(someone's	name),	and	appends	it	to	the string:	"Hello " and prints	it.	Example: if	the	name	passed	in	is	Coding	Temple.	It	will print "Hello Coding Temple"
+                  </p>
+                  <h3>Problem 4</h3>
+                  <p>
+                      Write	a	method	that	takes	an	array	and	returns	the	sum.
+                  </p>
+                  <h3>Problem 5</h3>
+                  <p>
+                      Write	a	method	that	that	takes	3	parameters	(string,	int,	char),	it	will	return	a	new	string	with	new	letter	at	position	given	by	parameter.
+                  </p>
+                  <code>
+                      ChangeChar("Hello",	1,	'a'); // will return "Hallo"	
+                  </code>
+                  <h3>Problem 6</h3>
+                  <p>
+                      Write	a	method	that	will	take	two	integers	and	will	return	the	first	integer	to	the	power	of	the	second	integer.	
+                  </p>
+                  <code>
+                    Power(2,3);	//this	should	return	8
+                  </code>
+                  <h3>Problem 7</h3>
+                  <p>Write	a method that will take	an array of integers and return	the	greatest value in that array.</p>
+                  <p>
+                  <code>
+                      int[] numbers = {24, 13, 27, 8};<br>
+                      Greatest(numbers);	//this	should	return	27
+                  </code>
+                <h2>Videos to Watch - Week 2 : Part 2</h2>
+                  <ol>
+                      <li>Working	with	Date	and	time</li>
+                      <li>Understanding	Classes</li>
+                      <li>More	About	Classes	and	Methods</li>
+                  </ol>
+                  <h2>Problems - Week 2 : Part 2</h2>
+                  <h3>Problem 8</h3>
+                  <p>Create	a	class	called	Person. Give	it	the	following	properties:</p>
+                  <ul>
+                    <li>Age (int)</li>
+                    <li>Name (string)</li>
+                    <li>Gender (string)</li>
+                  </ul>
+                  <p>Give it a method called Birthday, which causes the Age to increase by 1.</p>
+                  <p>In your Main method, create an instance of Person, assign a value to each of the properties, and invoke the Birthday method.</p>
+                  <code>
+                      <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Person p1 = new	Person();
+        p1.Name	= "Frank";
+        p1.Age = 30;
+        p1.Gender = "Male";
+        p1.Birthday();
+        Console.WriteLine(p1.Age);  //Should print out 31;
+    }	
+}
+                      </pre>
+                  </code>
+                  <h3>Problem 9</h3>
+                  <p>
+                      Create a class called	Vehicle. Give it the following properties:	
+                  </p>
+                  <ul>
+                      <li>Make (string)</li>
+                      <li>Model (string)</li>
+                      <li>Year (int)</li>
+                      <li>Color (string)</li>
+                      <li>Miles (decimal)</li>
+                  </ul>
+                  <p>Give it the following methods:</p>
+                  <dl>
+                      <dt>Drive</dt>
+                      <dd>Takes a parameter of type decimal, and adds that value to the Miles property.  Returns void.</dd>
+                      <dt>IsNew</dt>
+                      <dd>Takes no parameters, and returns a True if the Year property is equal to the current year, false otherwise.</dd>
+                  </dl>
+                  <!--<p>For the purposes of this assignment, we	will	limit	our	set	of	"makes"	to	the	following: GM, Ford, Lincoln, Chrysler, Cadillac, Jeep, Tesla, Nissan, Mitsubishi, Infiniti, Honda, Toyota, MercedesBenz, Audi, BMW, Volkswagen</p>-->
+                  <p>
+                      Create	an	instance	of	Vehicle	in the Main method	(in	Program	class)	and	assign a value to each of the properties of	that instance a value.  Invoke both methods to see the result
+                  </p>
+                <code>
+                    <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Vehicle v1 = new Vehicle();
+        v1.Make	= "Ford";
+        v1.Model = "T";
+        v1.Color = "Brown";
+        v1.Miles = 1000m;
+        v1.Year = 1925;
+        
+        Console.WriteLine(v1.IsNew());  //Should print out false;
+        v1.Drive(100);
+        Console.WriteLine(v1.Miles); //Should print out 1100;
+    }	
+}
+                    </pre>
+                  </code>
+                  <h3>Problem 10</h3>
+                  <p>Create	a	class	called	Point. Give	it	the	following	properties:</p>
+                  <ul>
+                      <li>X (decimal)</li>
+                      <li>Y (decimal)</li>
+                  </ul>
+                  <p>Give it the following methods:</p>
+                  <dl>
+                      <dt>Point</dt>
+                      <dd><b>Constructor</b> which takes two arguments, x and y, of type decimal, and assigns them to the X and Y properties</dd>
+                      <dt>Distance</dt>
+                      <dd>non-static method which takes a Point as a parameter, and returns a decimal for the distance</dd>
+                  </dl>
+                  <p><img class="img-fluid" src="http://i.imgur.com/UK46xKd.jpg" />
+                  </p>
+                  
+                  <code>
+                    <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Point a = new Point(22.5, -6.2);
+        Point b = new Point(0.0, 10);
+        decimal calculatedDistance = a.Distance(b);
+        
+        Console.WriteLine(calculatedDistance); 
+    }	
+}
+
+public class Point
+{
+    public Point(decimal x, decimal y)
+    {
+        //Assign properties here
+    }
+    
+    public decimal Distance(Point that)
+    {
+        //Use the distance formula here. 
+        //You can access one point using "that" parameter, and the other point using the "this" object.
+    }
+}
+
+                    </pre>
+                  </code>
+                  <h3>Problem 11</h3>
+                  <p>Create	a	class	called	Employee. Give it the following	properties:</p>
+                  <ul>
+                      <li>Name (string)</li>
+                      <li>DateOfBirth (DateTime)</li>
+                      <li>JobTitle (string)</li>
+                      <li>Salary(decimal)</li>
+                      <li>Count (int, mark this as static)</li>
+                  </ul>
+                  <p>Create the following special methods, referred to as <emphasis>Overloaded Constructors</emphasis></p>
+                  <dl>
+                      <dt>Employee(string name, DateTime dateOfBirth)</dt>
+                      <dd>Assigns the name and dataOfBirth parameters to the properties, assigns JobTitle the value of "", and Salary the value of -1;</dd>
+                      <dt>Employee(string name, DateTime dateOfBirth, string jobTitle, decimal salary)</dt>
+                      <dd>Assigns all four parameter values to the appropriate properties</dd>
+                      <dt>Employee()</dt>
+                      <dd>Defaults the property values to "" for name and jobTitle, -1 for salary, and DateTime.Now for dateOfBirth.</dd>
+                  </dl>
+                  <p>Every time an Employee is created, increment the Employee.Count property by 1.</p>
+                  
+                  <p>Create three instances of an employee object using the different constructors</p>
+                                    <code>
+                    <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Employee a = new Employee("Sally", new DateTime(1972, 3, 15), "CEO", 120000m);
+        Employee b = new Employee("Bill", new DateTime(1981, 1, 16));
+        Employee c = new Employee();
+        Console.WriteLine(Employee.Count);  //Should print 3 
+    }	
+}
 
 
-<p>
-Welcome	to	Coding	Temple’s	10-week	C#	ASP.NET	MVC	boot	camp.	The	following	are	the	instructions	to	begin	your	journey	in	becoming	an	excellent	developer.	1.Join	Slack	a.		Please	accept	the	invite	for	Slack.	These	invites	will	be	sent	later	Today.		b.We	will	use	Slack	as	a	platform	for	communications	within	the	class.	c.You	can	ask	questions	related	to	the	assignments	in	our	slack	#dotnet	channel	2.		To	turn	in	the	assignments	PM	the	instructoron	slack	and	send	him	the	completed	assignment.	Once	the	instructor	has	reviewed	the	assignment	he	will	send	you	the	next	assignment		3.Suggested	Videos:	1.	Course	Introduction	2.	Creating	Your	First	C#	Program	3.	Understanding	Your	First	C#	Program	4.	Working	with	Code	Files,	Projects,	and	Solutions	5.	Understanding	Data	Types	and	Variables	6.	The	if	Decision	Statement	7.	Operators,	Expressions,	and	Statements	8.	For	Iteration	Statement4.Week	1	Assignment	a.		Go	to	this	link:	https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169?l=Lvld4EQIC_2706218949b.Watch	the	following	sections	in	order:	i.Series	Introduction	
-ii.Install	Visual	Studio	2017	Community	1.Instructions	for	this	will	be	provided	by	Coding	Temple	iii.Creating	your	first	C#	program	iv.Quick	Overview	of	Visual	Studio	IDE	v.Declaring	Variables	and	assigning	values	vi.Branching	with	the	if	decisions	statement	and	conditional	operator	vii.Operators,	expressions,	and	statements	viii.For	iterations	ix.Creating	array	of	values	c.Additional	Resources	i.http://www.tutorialspoint.com/csharp/d.Questions	for	Week	1	are	included	in	the	following	pages.	
-1.		Create	a	basic	C#	console-mode	program	that	simply	outputs	the	text	"Hello	World".			2.Write	a	C#	program	to	print	the	result	of	dividing	24	into	5	on	screen.	3.		Write	a	C#	program	to	print	on	screen	the	result	of	adding,	subtracting,	multiplying	and	dividing	two	numbers	typed	by	the	user.	The	remainder	of	the	division	must	be	displayed,	too.			It	might	look	like	this:		Enter	a	number:	12		Enter	another	number:	3		12	+	3	=	15		12	-3	=	9		12	x	3	=	36		12	/	3	=	4		12	mod	3	=	0		Convert	input	(which	will	always	be	a	string)	to	integer	with	the	following:		string	number	=	Console.ReadLine();	int	num	=	Convert.ToInt32(number);		//call	Convert.ToInt32(your	stringhere);	
-4.Write	a	C#	program	to	calculate	and	display	the	average	of	four	numbers	entered	by	the	user.	5.Write	a	C#	program	to	get	a	number	from	the	user	and	answer	whether	it	is	positive	or	negative.		6.		Create	a	program	which	assigns	a	integer	variable	"amountOfPositives"	the	value	0,	1	or	2,	depending	on	the	values	of	two	numbers	a	&	b	(entered	by	the	user).	For	example,	if	the	user	enters	3	and	-2	seperately,	it	will	assign	1	to	amountofPostives	since	there	was	only	one	postive	number	out	of	the	two	entered	by	the	user.				7.Write	a	program	that	takes	a	number	from	the	user	and	prints:	a."fizz"	if	it	is	divisible	by	3	b."buzz"	if	it	is	divisible	by	5	c."fizz	buzz"	if	it	is	divisible	by	3	and	5	8.Write	a	C#	program	to	get	three	numbers	from	the	user	and	display	the	greatest	one.		9.		Write	a	program	that	asks	for	1	input,	a	number	score	(which	will	be	anywhere	between	0-100).	It	will	then	print	out	the	grade	(either	"A",	"B",	"C",	"D",	or	"F")	associated	with	that	number.	e.g.	"A"	will	be	printed	if	the	number	entered	was	93.			10.Write	a	program	that	takes	an	input	that	is	number,	and	will	output	all	the	numbers	between	that	number	and	0,	one	by	one.			11.Write	 a	 program,	 which	 asks	 for	 a	 character	 and	 a	 width,	 and	 displays	 a	square	 of	 that	 width,	 using	 that	 number	 for	 the	 inner	 symbol,	 as	 in	 this	Example:			Enter	a	character:	z		Enter	the	desired	width:	3		zzz	zzz	zzz
-12.Print	all	the	odd	numbers	from	1	to	a	user	specifiable	upper	limit	(inclusive)	Example:		Please	enter	a	number:	9	1	3	5	7	9	HINT:	The	number	9	should	be	included!!!	13.Let's	build	upon	problem	7.	Have	the	program	do	the	same	thing	except	loop	through	from	range	of	1	to	n,	printing	fizz	buzz.	If	the	number	in	the	range	is	not	divisble	by	3	or	5,	then	just	print	the	number.			Example:	Enter	a	number:	16	16	fizz	buzz	14	13	fizz	11	buzz	fizz		8	7	fizz	
-buzz	4	fizz	2	1	14.Given	an	array	with	values,	return	the	sum	of	the	elements	of	that	array.	For	instance,	if	you	were	given	int[]	numbers	=	{1,2,3,4,5},	it	should	print	out:	15			15.Given	an	array	with	values,	print	out	every	odd	indexed	element.	For	instance,	if	you	were	given	int[]	numbers	=	{1,4,2,6,5,8},	it	should	print:	4	6	8	16.Given	an	even	sized	array,	determine	if	the	sum	of	the	first	half	elements	equal	the	sum	of	the	second	half.	For	instance,	given	int[]	array	=	{1,2,3,2,2,2},	it	should	print:	True	This	is	because	1	+	2	+	3	is	equal	to	2	+	2	+	2	
-Pre-Work	Week	2Watch	the	following	sections	from	Microsoft’s	Academy1.		Understanding	Arrays2.		Creating	and	Calling	Methods3.		While	Iterations	statement4.		Working	with	Strings5.		Working	with	Date	and	time6.		Understanding	Classes7.		More	About	Classes	and	MethodsRed	Font:	After	watching	this	set,	you	can	complete	exercises	1	–7	Blue	Font:	After	watching	this	set,	you	can	complete	exercises	8-13	Questions	for	Part	2are	in	the	following	pages.
-For	problems	1	to	7,	you	will	write	a	function	within	a	class	called	program	and	callthose	functions	with	predetermined	values	within	the	main	function.	e.g.	using	System;	//using		etc....	namespace	Methods	{	class	Program	{	static	void	Main(string[]	args)	{	Program	a	=	new	Program();	string	value	=	a.func();				//	You	will	call	the	function	in	main	Console.WriteLine(value);	}	//You	will	define	the	function	in	the	class.	For	now,	it	doesn't	matter	if	it	is	public	or	private	private	string	func()	{	return	"Hello	World!";	}	}	}
-1.		Write	a	function	that	takes	2	integers	as	its	parameters	(arguments)	and	returns	(not	print)	the	sum	of	them.	Here	is	template:public	int	sum(int	a,	int	b){	1.		//code	goes	here}	*ifwe	call	it	in	Main,	the	value	returned	is	returned	(not	printed),	the	function	should	be	invoked	like	the	following	so	you	can	see	the	return	value:	Program	a	=	new	Program();	Console.WriteLine(a.sum(2,3));	or	Program	a	=	new	Program();	intnumber	=	a.sum(2,3);	Console.WriteLine(number);	2.		Write	a	function	that	takes	2	strings	and	returns	a	boolean	value	depending	on	whether	they	are	equal	or	not.	3.		Write	a	function	that	takes	one	string	(someone's	name),	and	appends	it	to	thefollowing	string:	"Hello	"	and	prints	it.	Example:	if	the	name	passed	in	is	Coding	Temple.	It	will	print	"Hello	Coding	Temple"	4.		Write	a	function	that	takes	an	array	and	returns	the	sum
-5.		Write	a	function	that	that	takes	3	parameters	(string,	int,	char),	it	will	return	a	new	string	with	new	letter	at	position	given	by	parameter.	Example:	Program	a	=	new	Program();a.ChangeChar("Hello",	2,	'a');	//^that	will	return	"Hallo"	//Notice	how	position	2's	index	is	1.	Remember	to	accommodate	for	that	fact	that	arrays	are	indexed	starting	at	0.	6.		Write	a	function	that	will	take	two	integers	and	will	return	the	first	integer	to	the	power	of	the	second	integer.	Example:	Programa	=	new	Program();	a.Power(2,3);	//this	should	return	8	7.		Write	a	function	that	will	take	an	array	of	integers	and	return	the	greatest	value	in	that	array.	8.		Create	a	class	called	Person.	a.		Give	it	the	following	properties:	age,	name,	gender.	b.		Give	it	a	method/function	that	prints	out	whether	that	person	is	an	adult.	We	will	categorize	an	adult	as	a	person	that	is	18	or	older.	Name	that	function	IsAdult.	c.		Create	an	instance	of	Person	in	main	(in	Program	class)	and	assigneach	of	the	properties	of	that	instance	a	value.	Then	invoke	the	instance's	helper	method.	Here	is	an	example	of	what	should	go	in	main:
-class	Program	{	static	void	Main(string[]	args)	{	Person	p1	=	new	Person();	p1.name	=	"Avi";	p1.age	=	24;	p1.gender	=	"Male";	bool	x	=	p1.IsAdult();	Console.WriteLine(x);	}	}	^The	above	should	print	out	"True".	9.		Create	a	class	called	Vehicle.	a.		Note:	we	will	limit	our	set	of	"makes"	to	the	following:	i.	 	GM,	 Ford,	 Lincoln,	 Chrysler,	 Cadillac,	 Jeep,	 Tesla,	 Nissan,	Mitsubishi,	 Infiniti,	 Honda,	 Toyota,	 Mercedes	 Benz,	 Audi,	BMW,	Volkswagen	b.		Give	it	the	following	properties:	Make,	Model,	Year,	Color,	Milesc.		Give	it	the	following	methods:	d.		IsNew	(determines	whether	car	is	new	based	on	miles.	Anything	above	25	miles	is	false)	e.		IsDomestic	(Returns	a	boolean	value	depending	on	whether	the	make	of	the	car	is	a	domestic	brand)	f.	Create	an	instance	of	Vehicle	in	main	(in	Program	class)	and	assign	each	of	the	properties	of	that	instance	a	value.	Then	invoke	both	of	those	instance	methods	and	print	out	their	results.	10.		Create	a	class	called	Point.	a.		Give	it	the	following	properties:	X,	Y
-b.		Give	it	a	constructor	that	assigns	the	instance	its	X	and	Y	values.	c.		Create	a	function	in	Program	class	called	distance.	This	function	will	take	two	instances	of	Point	and	return	the	distance	between	them.	Here	is	some	code	to	help	you	out:	class	Program	{	static	void	Main(string[]	args)	{	Point	 a	 =	 new	 Point(0.0,	 1.0);	Point	 b	 =	 new	 Point(0.0,	 2.0);	int	dis	=	distance(a,b);	Console.WriteLine(dis);	//This	should	print	out	1.0}	privatestatic	double	distance(Point	alpha,	Point	beta)	{	//code	goes	here	(	distance	formula:	http://imgur.com/UK46xKd)	}	}	class	Point	{	//code	goes	here	}	11.Create	a	class	called	Employee.	a.		Give	it	the	following	properties:	Name,	Age,	Position,	Salary:	b.		Create	3	overloaded	constructors,	one	that	will	take	name	and	age	as	parameters,	another	that	will	take	all	four	parameters,	and	one	that	will	take	no	parameters.
-c.		Create	a	static	property	of	employee	called	count.	Every	time	an	instance	of	employee	is	created	the	count	gets	incremented.	Example:Employee	a	=	new	Employee();	//Default	values	are:	Name	=	"",	Age	=	-1,	Position	=	"",	Salary	=	-1	Employee	b	=	new	Employee("Avi	Patel",	24);	//Position	and	Salary	willdefault	to	""	and	-1	Employee	c	=	new	Employee("Avi	Patel",	24,	"Software	Engineer",	"100000000");	//	--LOL,	I	wish...	Employee.count	//This	should	return	3	since	3	instances	were	created.	If	I	did	a.Age;	in	main,	I	would	get	the	following	value:	-1	If	I	did	c.Age;	in	main,	I	would	get	the	following	value:	24	12.Let	us	build	upon	9.	Let	us	create	two	classes	(Car	and	Truck)	that	derive	from	class	Vehicle.	a.		Give	each	class	a	propertycalled	"type".	Every	instance	of	car	has	"type"	value:	"car"	and	every	truck	instance	has	"type"	value:	"truck".	b.		If	I	try	to	find	the	type	value	of	a	car,	the	returning	value	would	be	"car"	Example:	class	Program	{	static	void	Main(string[]	args)	{	Car	a	=	new	Car();	a.color	=	"Black";	//The	following	properties	are	inherited	from	class	Vehicle.	a.make	=	"Ford";			//In	other	words,	I	do	not	need	to	define	them	in	Car	class.	a.model	=	"T";
-a.miles	=	0;	a.year	=	1910;	Truck	b	=	new	Truck();	Console.WriteLine(a.type);	//should	print	out	"Car"	Console.WriteLine(b.type);	//should	print	out	"Truck"	}}	13.Create	a	class	called	Animal.	a.		Give	it	the	following	property:	Age	b.		Give	it	the	following	method/function:	speak	(This	will	print	an	empty	string)	c.		Create	a	constructor	that	will	take	a	parameter	and	assign	it	to	that	instance's	age.	In	other	words,	I	should	be	able	to	do	the	following:	i.		Animal	a	=	new	Animal(9);	d.		Create	a	class	called	Dog	and	a	class	called	Cat	that	both	derive	from	Animal.	e.		Override	the	speak	method	in	both	classes,	where	if	you	call	speak	on	a	dog	instance	it	will	print	"Arf".	f.			If	you	call	speak	on	a	cat	instance,	it	will	print	"Meow".g.		Note:	In	an	actual	production	environment,	we	would	never	print	something	from	within	an	instance	method.	This	would	be	done	in	main,	as	shown	in	previous	problems.	Example:	class	Program	{	static	void	Main(string[]	args)	{	Animal	a	=	new	Animal(9);	Dog	b	=	new	Dog(2);	Cat	c	=	new	Cat(5)	a.speak();		//should	print	nothing	(aka	empty	string)
-b.speak();		//should	print	"Arf"	c.speak();						//should	print	"Meow"	//Notice	that	we	did	not	using	Console.WriteLine.	Like	Imentioned	earlier,	in	production	//we	would	use	Console.WriteLine(a.speak());	}	}	14.Create	a	class	called	BankAccount.	a.		Give	it	the	following	properties:	account	number,	owner	(their	name),	and	balance.	b.		Give	it	two	constructors:i.		BankAccount(	string	number,	string	owner,	uint	balance	)	ii.		BankAccount(	string	number,	string	owner	)		//balance	should	default	to	0.	c.		Give	it	two	methods	i.		Withdraw(	uint	amount	)	1.		Will	withdraw	an	amount	from	the	balance	ii.		Deposit(	uint	amount	)	1.		Will	deposit	an	amount	into	the	balanced.		Create	two	classes	called	CheckingAccount	and	SavingsAccount	i.		Both	which	would	inherit	from	BankAccount.	e.		Override	both	methods	in	the	derived	classes	using	the	"new"	keyword.	For	both	withdraw	methods	in	the	derived	classes,	make	sure	you	do	not	withdraw	more	than	the	balance	on	their	accounts.	Furthermore,	for	the	savings,	make	sure	you	cannot	withdraw	more	than	10%	of	the	balance	in	savings.	i.		Example:	if(balance	*	.10	>	amount)ii.		This	checks	if	amount	to	withdraw	is	less	than	10%	of	balance	in	savings	account.
+
+                    </pre>
+                  </code>
+                  <h3>Problem 12</h3>
+                  <p>
+                      We're going to expand on Problem 9.  In addition to the Vehicle class you had previously created, create a new Class, Car, which <em>Inherits</em> from Vehicle, by defining the class as follows:
+                  </p>
+                  <code>
+                      public class Car : Vehicle<br>
+                      {<br>
+                      <br>
+                      }<br>
+                  </code>
+                  <p>In addition to the Car class, create a Truck class which also inherits from Vehicle. Create an instance of each new class inside your main method, and assign properties to the Make, Model, Year, Color, and Miles of each. Notice that you don't need to re-define these properties on Car and Truck.  As these classes inherit from Vehicle, they already have all of the public methods and properties that vehicle has.</p>
+                  <code>
+                  <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Car c = new Car();
+        c.Color = "Yellow";
+        
+        Truck t = new Truck();
+        t.Miles = 100;
+    }	
+}
+                  </pre>
+                  </code>
+                  <p>
+                      <h3>Problem 13</h3>
+                  <p>
+                      Create a class called	Animal.  Give it the following properties:
+                  </p>
+                  <ul>
+                      <li>Name (string)</li>
+                      <li>Dirty (bool)</li>
+                  </ul>
+                  <p>Give it the following methods:</p>
+                  <dl>
+                      <dt>Animal(string name)</dt>
+                      <dd>A constructor which takes the name and assigns it to the Name property.</dd>
+                      <dt>Speak()</dt>
+                      <dd>A method which returns a string</dd>
+                  </dl>
+                  <p>Create two additional classes, Cat and Dog which inherit from Animal.  Notice that because Animal's constructor takes a parameter, Dog and Cat need constructors which can call the Animal constructor.  e.g.</p>
+                  <code>public class Dog<br>{<br>public Dog(string name) : base(name) {}<br>}<br></code>
+                  <p>Create a static method in your program class called WashTheAnimal, which takes a parameter of type Animal.  In your Main method, create an instance of Dog and Cat, and pass each of them to the WashTheAnimal method</p>
+                  <code>
+                  <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Dog d = new Dog("Harry");
+        d.Dirty = true;
+        
+        Cat c = new Cat("Larry");
+        c.Dirty = true;
+        
+        WashTheAnimal(d);
+        WashTheAnimal(c);
+    }	
+    
+    private static void WashTheAnimal(Animal a)
+    {
+        a.Dirty = false;
+        Console.WriteLine(a.Name + " is clean");
+    }
+}
+                  </pre>
+                  </code>
+                  <p>Notice that I don't need to write two versions of "WashTheAnimal" for cats and dogs.  Since both classes inherit from Animal, instances of dogs and cats are valid arguments for methods which expect Animals. This technique is important, because it saves you from having to write duplicate code for each inheriting class. This concept is referred to as Polymorphism</p>
+                <p>
+                      
+                 <p>14.Create	a	class	called	BankAccount.	a.		Give	it	the	following	properties:	account	number,	owner	(their	name),	and	balance.	b.		Give	it	two	constructors:i.		BankAccount(	string	number,	string	owner,	uint	balance	)	ii.		BankAccount(	string	number,	string	owner	)		//balance	should	default	to	0.	c.		Give	it	two	methods	i.		Withdraw(	uint	amount	)	1.		Will	withdraw	an	amount	from	the	balance	ii.		Deposit(	uint	amount	)	1.		Will	deposit	an	amount	into	the	balanced.		Create	two	classes	called	CheckingAccount	and	SavingsAccount	i.		Both	which	would	inherit	from	BankAccount.	e.		Override	both	methods	in	the	derived	classes	using	the	"new"	keyword.	For	both	withdraw	methods	in	the	derived	classes,	make	sure	you	do	not	withdraw	more	than	the	balance	on	their	accounts.	Furthermore,	for	the	savings,	make	sure	you	cannot	withdraw	more	than	10%	of	the	balance	in	savings.	i.		Example:	if(balance	*	.10	>	amount)ii.		This	checks	if	amount	to	withdraw	is	less	than	10%	of	balance	in	savings	account.
 f.			Add	a	method	call	AddInterest(decimal	interest)	to	savings.	g.		If	you	call	a.AddInterest(2.3),	then	interest	will	be	applied	to	a's	balance.	In	other	words,	a.balance	will	equal	a.balance	+	a.balance	*	interest	
 Pre-Work	Week	3Watch	the	following	sections	from	Microsoft’s	Academy16.	Understanding	Scope	and	Accessibility	Modifiers	17.	Understanding	Namespaces	and	Working	with	the	.NET	Class	Library	18.	Creating	and	Adding	References	to	Assemblies	19.	Working	with	Collections	20.	Working	with	LINQ	21.	Enumerations	and	the	Switch	Decision	Statement	22.	Gracefully	Handling	Exceptions	23.	Understanding	Events	and	Event-Driven	Programming	24.	(Optional)	Where	to	Go	From	HereQuestions	for	Part3	are	in	the	following	pages.
 1.		A	namespace:	A.	Is	a	way	to	organize	classes	that	are	related,	typically	by	features	B.		Is	a	way	to	organize	methods	into	classes	C.		Is	a	way	to	organize	classes	into	Assemblies	D.	Is	a	way	to	organize	classes	into	projects	2.		Create	three	namespaces	called,	ns1,	ns2	and	ns3.	A.	Have	the	main	method	inside	ns1.	B.		In	ns2	and	ns3,	create	a	person	class.	In	this	person	class	give	it	a	method	called	"Print".	C.		In	ns2's	version,	have	it	print	"I	am	from	ns2".	For	ns3,	have	it	print	"I	amfrom	ns3".	D.	Since	Print	is	just	printing,	it	will	be	void	and	will	not	take	any	arguments.	E.		In	the	main	method	of	ns1,	create	an	instance	of	person	from	n2	and	an	instance	of	person	from	ns3.	F.		Invoke	both	instances	Print	method.	The	resulting	output	on	console	should	be	as	the	following:	i.		I	am	from	ns2.ii.		I	am	from	ns3.	3.		I	want	to	create	an	application	where	human	resources	dispense	paychecks	to	employees	and	give	out	raises.	A.	Create	a	class	called	Employee.	B.		Give	it	the	attributes:	string	id,	int	salary.	C.		The	salary	attribute	should	be	private.	Why?	Because	the	person	at	HR	does	not	need	to	know	the	salary	of	an	employee.	All	they	need	to	know	is	how	much	to	give	to	the	employee	every	2	weeks.	D.	Create	two	methods	called	dispense	and	raise.	Both	will	be	public	since	this	is	how	HR	will	be	able	to	give	raises	and	dispense	money	without	knowing	salary.
@@ -77,6 +495,11 @@ The	above	would	throw	an	error	since	the	attributes	are	private.	*/a.getDetails(
 7.		The	following	code	has	an	error	(	DivideByZeroException	)	if	the	second	argument	passed	in	is	0.	A.	Catch	the	resulting	exception	if	that	is	the	case	and	print	it,	otherwiseprint	the	result	of	division.	using	System;	namespace	ErrorHandlingApplication	{	class	DivNumbers	{	int	result;	DivNumbers()	{	result	=	0;	}	public	void	division(int	num1,	int	num2)	{	//try	the	following	result=	num1	/	num2;	//if	dividing	by	zero.	Then	an	exception	will	get	raised.	//catch	it	here	and	print	the	exception.//otherwise	print	the	result.	}	static	void	Main(string[]	args)	{	DivNumbers	d	=	new	DivNumbers();	d.division(25,	0);	d.division(25,	5);	Console.ReadLine();	}}	}
 The	output	will	be	similar	to	the	following:	Exception	caught:	System.DivideByZeroException:	Attempted	to	divide	by	zero.	at	...	Result: 5	
 </p>
+              </div>
+          </div>
+          
+          
+    
           
 
     </main>
