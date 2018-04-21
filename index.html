@@ -11,7 +11,7 @@
     <title>DotNet PreWork - Coding Temple</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">DotNet Prework</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -56,12 +56,15 @@
                   </ol>
                   <h2>Problems - Week 1</h2>
                   <h3>Problem 1</h3>
+                  <a href="https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-ide-orientation">https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-ide-orientation</a>
+                  <a href="https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-projects-solutions">https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-projects-solutions</a>
+                  <a href="https://docs.microsoft.com/en-us/visualstudio/ide/how-to-move-around-in-the-visual-studio-ide">https://docs.microsoft.com/en-us/visualstudio/ide/how-to-move-around-in-the-visual-studio-ide</a>
                   <p>Create	a basic	C# console application that prints the text	"Hello	World" to the screen when run.</p>
                   <h3>Problem 2</h3>
                   <p>Write	a	C#	program	to	print	the	result	of	dividing	24	into	5	on	screen.</p>
                   <h3>Problem 3</h3>
                   <p>Write a C# program	to	print	on	screen	the	result	of	adding,	subtracting,	multiplying	and	dividing	two	numbers	typed	by	the	user.	The	remainder	of	the	division	must	be	displayed,	too.</p>
-                  <code>
+                  <samp>
                       Enter	a	number:	12<br>		
                       Enter	another	number:	3<br>
                       12	+	3	=	15<br>		
@@ -69,12 +72,12 @@
                       12	x	3	=	36<br>
                       12	/	3	=	4<br>
                       12	mod	3	=	0<br>
-                  </code>
-                  <p>Convert input (which	will	always	be	a	string)	to	integer	with	the	following:</p>
-                  <code>
-                      string	number	=	Console.ReadLine(); <br>
-                      int	num	=	Convert.ToInt32(number);<br>
-                  </code>
+                  </samp>
+                  <p>Convert input (which will always be a string) to integer with the following:</p>
+                  <pre>
+string number = Console.ReadLine();
+int num = int.Parse(number);
+                  </pre>
                   <h3>Problem 4</h3>
                   <p>Write	a	C#	program	to	calculate	and	display	the	average	of	four	numbers	entered	by	the	user.</p>
                   <h3>Problem 5</h3>
@@ -483,18 +486,334 @@ public class Program
                   </pre>
                   </code>
                   <p>Notice that I don't need to write two versions of "WashTheAnimal" for cats and dogs.  Since both classes inherit from Animal, instances of dogs and cats are valid arguments for methods which expect Animals. This technique is important, because it saves you from having to write duplicate code for each inheriting class. This concept is referred to as Polymorphism</p>
-                <p>
+                  <h3>Problem 14</h3>
+                  <p>Create	a class	called BankAccount, give it the following properties:
+                  </p>
+                  <ul>
+                      <li>AccountNumber (string)</li>
+                      <li>Owner (string)</li>
+                      <li>Balance (decimal)</li>
+                  </ul>
+                  <p>Give it the following Methods</p>
+                  <dl>
+                      <dt>BankAccount(string accountNumber, string	owner, decimal balance)</dt>
+                      <dd>A constructor which assigns each parameter to the appropriate property.</dd>
+                      <dt>BankAccount(string accountNumber, string	owner)</dt>
+                      <dd>A constructor which assigns the accountNumber and owner properties, but default balance to 0</dd>
+                      <dt>Withdraw(decimal amount)</dt>
+                      <dd>Updates balance by subtracing the amount parameter to the balance.</dd>
+                      <dt>Deposit(decimal amount)</dt>
+                      <dd>Updates the balance by adding the amount parameter to the balance.</dd>
+                      <dt>AddInterest()</dt>
+                      <dd>This will be used to update the balance with a compound interest rate.  In the "BankAccount" base class, we'll leave this method empty</dd>
+                  </dl>
+                  <p>We'll be using a new C# keyword, <em>virtual</em>, as a modifier on the Withdraw, Deposit, and AddInterest methods. The method signature will look like this:</p>
+                  <code>public virtual void AddInterest()</code>
+                  <p>Create two classes, CheckingAccount and SavingsAccount, which inherit from BankAccount. CheckingAccount and SavingsAccount need two constructors each, which in turn will call the BankAccount constructors, as we did in Problem 13.</p>
+                  <p>While BankAccount provides an implementation for Deposit, Withdraw, and AddInterest, by marking them as virtual, you are allowed to <em>override</em> the default implementations in derived classes.  Use the override keyword to do so:</p>
+                  <code>public override void Deposit()</code>
+                  <p>Override the withdraw method in both classes, and make sure that someone cannot withdraw more money than is present in their account.  Futhermore, in the SavingsAccount, make that someone cannot withdraw more than 10% of their current balance. </p>
+                  <code>if(amount > (this.Balance * 0.10))</code>
+                  <p>In the SavingsAccount, override the AddInterest method so that the balance is increased by 0.2% when the method is called.</p>
                       
-                 <p>14.Create	a	class	called	BankAccount.	a.		Give	it	the	following	properties:	account	number,	owner	(their	name),	and	balance.	b.		Give	it	two	constructors:i.		BankAccount(	string	number,	string	owner,	uint	balance	)	ii.		BankAccount(	string	number,	string	owner	)		//balance	should	default	to	0.	c.		Give	it	two	methods	i.		Withdraw(	uint	amount	)	1.		Will	withdraw	an	amount	from	the	balance	ii.		Deposit(	uint	amount	)	1.		Will	deposit	an	amount	into	the	balanced.		Create	two	classes	called	CheckingAccount	and	SavingsAccount	i.		Both	which	would	inherit	from	BankAccount.	e.		Override	both	methods	in	the	derived	classes	using	the	"new"	keyword.	For	both	withdraw	methods	in	the	derived	classes,	make	sure	you	do	not	withdraw	more	than	the	balance	on	their	accounts.	Furthermore,	for	the	savings,	make	sure	you	cannot	withdraw	more	than	10%	of	the	balance	in	savings.	i.		Example:	if(balance	*	.10	>	amount)ii.		This	checks	if	amount	to	withdraw	is	less	than	10%	of	balance	in	savings	account.
-f.			Add	a	method	call	AddInterest(decimal	interest)	to	savings.	g.		If	you	call	a.AddInterest(2.3),	then	interest	will	be	applied	to	a's	balance.	In	other	words,	a.balance	will	equal	a.balance	+	a.balance	*	interest	
-Pre-Work	Week	3Watch	the	following	sections	from	Microsoft’s	Academy16.	Understanding	Scope	and	Accessibility	Modifiers	17.	Understanding	Namespaces	and	Working	with	the	.NET	Class	Library	18.	Creating	and	Adding	References	to	Assemblies	19.	Working	with	Collections	20.	Working	with	LINQ	21.	Enumerations	and	the	Switch	Decision	Statement	22.	Gracefully	Handling	Exceptions	23.	Understanding	Events	and	Event-Driven	Programming	24.	(Optional)	Where	to	Go	From	HereQuestions	for	Part3	are	in	the	following	pages.
-1.		A	namespace:	A.	Is	a	way	to	organize	classes	that	are	related,	typically	by	features	B.		Is	a	way	to	organize	methods	into	classes	C.		Is	a	way	to	organize	classes	into	Assemblies	D.	Is	a	way	to	organize	classes	into	projects	2.		Create	three	namespaces	called,	ns1,	ns2	and	ns3.	A.	Have	the	main	method	inside	ns1.	B.		In	ns2	and	ns3,	create	a	person	class.	In	this	person	class	give	it	a	method	called	"Print".	C.		In	ns2's	version,	have	it	print	"I	am	from	ns2".	For	ns3,	have	it	print	"I	amfrom	ns3".	D.	Since	Print	is	just	printing,	it	will	be	void	and	will	not	take	any	arguments.	E.		In	the	main	method	of	ns1,	create	an	instance	of	person	from	n2	and	an	instance	of	person	from	ns3.	F.		Invoke	both	instances	Print	method.	The	resulting	output	on	console	should	be	as	the	following:	i.		I	am	from	ns2.ii.		I	am	from	ns3.	3.		I	want	to	create	an	application	where	human	resources	dispense	paychecks	to	employees	and	give	out	raises.	A.	Create	a	class	called	Employee.	B.		Give	it	the	attributes:	string	id,	int	salary.	C.		The	salary	attribute	should	be	private.	Why?	Because	the	person	at	HR	does	not	need	to	know	the	salary	of	an	employee.	All	they	need	to	know	is	how	much	to	give	to	the	employee	every	2	weeks.	D.	Create	two	methods	called	dispense	and	raise.	Both	will	be	public	since	this	is	how	HR	will	be	able	to	give	raises	and	dispense	money	without	knowing	salary.
-E.		Dispense	will	be	a	void	function	which	will	print	out	how	much	has	been	dispensed	when	invoked.	To	determine	the	amount,	you	would	do	salary/24,	since	we	are	dispensing	biweekly.	F.		Raise	will	take	the	current	salary	of	the	employee	and	raise	it	by	a	givenamount	which	is	passed	in	as	an	argument.	G.	Here	is	barebones	code:	class	Employee	{	//fill	this	in	}	class	Program	{	static	void	Main(string[]	args)	{	/*Manager	at	HR	creates	an	instance	of	employee.	Only	one	person	at	HR	(aka	manager)	knows	the	salary.	Company	policy	dictates	that	no	one	else	should	know	employee's	salary,	minus	CEO	and	HR	manager.	*/	Employee	a	=	new	Employee("123",112000);	//let's	pretend	that	this	is	stored	in	a	database	after	creation.	/*	Now	let's	pretend	someone	else	at	HR	pulled	that	employee	object	from	the	database.	In	other	words,	they	did	not	see	the	code	above.	They	are	told	to	give	it	a	raise.	But	how	can	they	since	theydon'thave	access	to	salary?	The	salary	is	private,	so	the	only	way	to	increase	it	is	to	use	the	raise	method.	With	some	easy	math,	anyone	can	figure	out	salary	if	they	took	the	amount
-printed	out	by	the	dispense	method	and	multiplied	it	by	24.	But	let's	pretend	they	don't	know	that.	*/a.dispense();	//should	print	out	the	amount	being	dispensed.	a.raise(2000);	//should	raise	the	salary	by	2000.	a.dispense();	//should	print	out	a	new	amount	beingdispensed.	Since	the	amount	being	dispense	depends	on	salary.	}	}	4.		Create	a	class	called	Rectangle.	A.	Give	it	two	private	variables	called	Length	and	Width.	B.		Give	it	a	function	called	area	which	returns	the	area.	And	a	function	which	prints	the	details	(length	and	width)	of	Rectangle.	C.		Barebones:class	Rectangle	{	//code	goes	here	}	class	Program	{	static	void	Main(string[]	args)	{	Rectangle	a	=	new	Rectangle(4,5);	Console.WriteLine(a.area());	//should	print	20	/*	Console.WriteLine("Width:	"	+a.width	+	",	"	+	"Length:	"	+	a.length);
-The	above	would	throw	an	error	since	the	attributes	are	private.	*/a.getDetails();	//	should	print	'Length:	4,	Width:	5'	}	}	5.		Create	a	function/method	that	takes	a	capitalized	letter	grade	from	'A'	to	'F'.	A.	Use	a	switch	statement	to	print	the	following	for	each	case:	i.		'A':				Excellent!	ii.		'B':				Well	done!	iii.		'C':			Average,	not	bad.	iv.		'D':			You	barely	passed.	v.		'F':				Try	again	vi.		For	anything	else,	print	invalid	input.	Note	that	the	above	is	not	the	actual	syntax	for	a	switch	statement	and	printing	the	text.	6.		The	following	would	all	be	in	main.	A.	Create	an	enum	called	Temperature.	B.		Give	it	the	following	list	i.		Lowii.		Medium	iii.		High	C.		Given	a	value	from	0	to	2,	inclusive.	Use	a	switch	case	on	that	value	andprint	out	the	temperatures.	Print	"invalid	input"	if	the	given	value	is	not	in	the	range	of	0	to	2.	D.	Example	for	one	case:switch(	num	)	{	case	Temperature.Low	:	//then	print	out	"Temp	is	Low"	}
-7.		The	following	code	has	an	error	(	DivideByZeroException	)	if	the	second	argument	passed	in	is	0.	A.	Catch	the	resulting	exception	if	that	is	the	case	and	print	it,	otherwiseprint	the	result	of	division.	using	System;	namespace	ErrorHandlingApplication	{	class	DivNumbers	{	int	result;	DivNumbers()	{	result	=	0;	}	public	void	division(int	num1,	int	num2)	{	//try	the	following	result=	num1	/	num2;	//if	dividing	by	zero.	Then	an	exception	will	get	raised.	//catch	it	here	and	print	the	exception.//otherwise	print	the	result.	}	static	void	Main(string[]	args)	{	DivNumbers	d	=	new	DivNumbers();	d.division(25,	0);	d.division(25,	5);	Console.ReadLine();	}}	}
-The	output	will	be	similar	to	the	following:	Exception	caught:	System.DivideByZeroException:	Attempted	to	divide	by	zero.	at	...	Result: 5	
-</p>
+                 <p>
+                  <h2>Videos to Watch - Week 1</h2>
+                  <ol>
+                      <li>Understanding	Scope and Accessibility	Modifiers</li>
+                      <li>Understanding	Namespaces and Working with the .NET Class Library</li>
+                      <li>Creating and Adding References to Assemblies</li>
+                      <li>Working with Collections</li>
+                      <li>Working with LINQ</li>
+                      <li>Enumerations and the Switch Decision Statement</li>
+                      <li>Gracefully Handling Exceptions</li>
+                      <li>Understanding	Events and Event-Driven	Programming</li>
+                      <li>(Optional) Where to Go From Here</li>
+                  </ol>
+                  <h2>Problems - Week 3</h2>
+                  <h3>Problem 1</h3>
+                  <p>Create	a console application. Notice that the Program class is created inside of the Namespace which matches the name of our project. Create two additional classes, each called Person, but create one inside of a namespace <em>ns1</em>, while the other will be inside of a namespace <em>ns2</em>.  Each person class should have a single method, Print, which prints out "I am from ns2" in the ns2 namespace, and "I am from ns1" inside the ns1 namespace.</p>
+                  <p>In the Main method of your program class, create an instance of each type of Person and call the Print method.</p>
+                  <code>
+                      <pre>
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        ns1.Person person1 = new ns1.Person();
+        ns2.Person person2 = new ns2.Person();
+        person1.Print();
+        person2.Print();
+        Console.ReadLine();
+    }
+}
+                      </pre>
+                  </code>
+                      <h3>Problem 2</h3>
+                  <p>
+                      We're going to modify our Week 2 : Problem 11 program to make our Employee class part of a Human Resources Payroll system. We'll make a slight change to the existing employee class.  Instead of "Salary" being marked as a public property, we're going to modify it using the Private keyword access modifier:
+                  </p>
+                  <code>private decimal Salary {get; set;}</code>
+                  <p>By marking the salary property private, only methods and properties defined inside of the Employee class can change the Salary property. You can read more about access modifiers here: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers">https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers</a>
+                  </p>
+                  <p>We'll be adding two other methods to our employee class:</p>
+                  <dl>
+                      <dt>Dispense()
+                      </dt>
+                      <dd>Returns a decimal of the Salary divided by 26.  This is the bi-monthly paycheck amount the employee receives.</dd>
+                      <dt>Promote(decimal additionalPay, string newJobTitle)</dt>
+                      <dd>
+                          Adds an amount to an employee's salary, and changes their job title.
+                      </dd>
+                  </dl>
+                  <p>Here's some barebones code of our new HR System:</p>
+                  <code>
+                      <pre>
+using System;
+using System.Collections.Generic;  //I need this to use List&lt;Employee&gt; instead of Employee[]
+
+public class Program
+{
+    public static void Main()
+    {
+        List&lt;Employee&gt; employees = new List&lt;Employee&gt;;
+        employees.Add(new Employee("Rick", new DateTime(1981, 1, 16), "Software Engineer", 65000m));
+        employees.Add(new Employee("Tina", new DateTime(1978, 7, 4), "Senior Software Engineer", 85000m));
+        employees.Add(new Employee("Chris", new DateTime(1993, 2, 13), "Associate Software Engineer", 55000m));
+        employees.Add(new Employee("Mindy", new DateTime(1996, 8, 3), "Chief Technology Officer", 155000m));
+        
+        foreach(Employee employee in employees)
+        {
+            Console.WriteLine(employee.Dispense());
+        }
+        
+        //employee[0].Salary = 1000000000m  //This doesn't compile
+        employee[2].Promote(10000m, "Software Engineer");   //But this does
+        
+        Console.ReadLine();
+    }
+
+}
+                      </pre>
+                      </code>
+                  <p>
+                      While this is an oversimplified example of how developers use the private keyword, in practice it forces us to interact with code through a well-defined contract.  This is the principal of <em>Encapsulation.</em>
+                  </p>
+                  <h3>Problem 3</h3>
+                  <p>We're going to re-write Week 1 - Problem 9 to use the "switch" keyword".  Here's an implementation of the Problem to start with:</p>
+                  <code>
+                      <pre>
+                      
+Console.WriteLine("Enter your score");
+string input = Console.ReadLine();
+int grade = int.Parse(input);
+int leadingDigit = grade / 10;
+
+if(leadingDigit == 10)
+{
+    Console.WriteLine("A");
+}
+else if(leadingDigit == 9)
+{
+    Console.WriteLine("A");
+}
+else if(leadingDigit == 8)
+{
+    Console.WriteLine("B");
+}
+else if(leadingDigit == 7)
+{
+    Console.WriteLine("C");
+}
+else if(leadingDigit == 6)
+{
+    Console.WriteLine("D");
+}
+else
+{
+    Console.WriteLine("F");
+}
+                      </pre>
+                  </code>
+                  <p>Change the if/else block to use the switch, case, default, and break keywords.</p>
+                  <h3>Problem 4</h3>
+                  <p>
+                      We're going to modify our Week 2 - Problem 9 to enforce some additional rules about our Vehicle.  For the purposes of this exercise, we want to limit our set of "makes" to the following: GM, Ford, Lincoln, Chrysler, Cadillac, Jeep, Tesla, Nissan, Mitsubishi, Infiniti, Honda, Toyota, MercedesBenz, Audi, BMW, Volkswagen.  Rather than marking the Make property as a string, we're going to use an Enum structure to create this restriction. Add the following code to your project:</p>
+                  <code>
+                      <pre>
+public class Program
+{
+    public static void Main()
+    {
+        Vehicle v1 = new Vehicle();
+        v1.Make	= "Ford";   //This line is going to need to change
+        v1.Model = "T";
+        v1.Color = "Brown";
+        v1.Miles = 1000m;
+        v1.Year = 1925;
+        
+    }
+    
+}
+
+public class Vehicle
+{  
+    //...Your existing code should still be in here
+    public VehicleMake Make { get; set;}
+
+}
+
+public enum VehicleMake
+{
+    GM, 
+    Ford, 
+    Lincoln, 
+    Chrysler, 
+    Cadillac, 
+    Jeep, 
+    Tesla, 
+    Nissan, 
+    Mitsubishi, 
+    Infiniti, 
+    Honda, 
+    Toyota, 
+    MercedesBenz, 
+    Audi, 
+    BMW, 
+    Volkswagen
+}
+                      </pre>
+                  </code>
+                  <p>
+                      
+                      Using the supplied code, modify the Program's Main method so that the Make is set correctly.  Visual Studio's IntelliSense capability should "suggest" the correct way to write this.
+                  </p>
+                  <h3>Problem 5</h3>
+                  <p>
+                      We're going to re-run our Week 1 : Problem 3 code, but pass in some different parameters:
+                  </p>
+                  <code>
+                      <pre>
+Console.WriteLine("Enter a number");
+string input = Console.ReadLine();
+int a = int.Parse(input);
+
+
+Console.WriteLine("Enter another number");
+input = Console.ReadLine();
+int b = int.Parse(input)
+
+Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+Console.WriteLine("{0} mod {1} = {2}", a, b, a % b);
+
+Console.ReadLine();
+                      </pre>
+                  </code>
+                  <p>
+                      What happens if you enter the value "0" for your second parameter?  Alternatively, what happens if you type "hot dogs" instead of a number? In either case, this will cause what is referred to as an <em>exception</em>, sometimes referred to as a <em>runtime error</em>. Even though your code compiled, the user was able to enter input which your code did not expect. Professional developers are expected to practice <a href="https://en.wikipedia.org/wiki/Defensive_programming">defensive programming</a> to guard against this. In C#, an unhandled exception or runtime error will immediately terminate execution of the program, so as to avoid executing code which is in an unexpected state and causing undesirable side effects to your system.
+                  </p>
+                  <p>
+                      One of the basic techniques to harden your code against these sort of situations is to introduce some basic exception handling structures in your code:
+                  </p>
+                  <code>
+                      <pre>
+int a = 20;
+int b = 10;
+int c = 0;
+
+try
+{
+    int result1 = a / b;
+}
+catch(Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
+try
+{
+    int result2 = a / c;
+}
+catch(System.DivideByZeroException ex)  //This will only catch "DivideByZeroException" objects
+{
+    Console.WriteLine(ex.Message);
+}
+
+                        
+                      </pre>
+                  </code>
+                  <p>
+                      Modify the problem above to handle passing 0 as the second number. If you're feeling ambitious, try handling the int.Parse exception that occurs when a user types in something that isn't a number, as well.
+                  </p>
+                  <h3>Problem 6</h3>
+                  <p>
+                      Take a look at the following code:
+                      <code>
+                      <pre>
+                      
+public class Rectangle
+{
+    //The underscore is a "style guideline"
+    //but has no effect on how this compiles or runs.
+    private double _length;     
+    private double _width;
+
+    public Rectangle(double length, double width)
+    {
+        _length = length;
+        _width = width;
+    }
+    
+    public double Perimeter
+    {  
+        get
+        {
+            return 0;   //This isn't correct
+        }
+        
+    }
+    
+    public double Area
+    {
+        get
+        {
+            return 0;   //Neither is this
+        } 
+    }
+}
+                </pre>
+                      </code>
+                          
+                      
+                      <p>In this case, we don't supply a way to set Area or Perimeter, since these values are derived from the length and width.  Notice that the Perimeter and Area methods don't return the correct values:</p>
+                        <code>Rectangle r = new Rectangle(4, 5);<br>Console.WriteLine(r.Area); //Should be 20, but prints 0</code>
+                  <p>This is an interesting example of code which compiles, runs without generating any exceptions, but is functionally incorrect. While you might notice this if you spent some time looking at the code, these sorts of defects are often much more subtle.  To improve the quality of code, professional developers rely on automated <em>Unit Tests</em> to verify that their code not only compiles, but functionally works as expected</p>
+                  <p>Visual Studio provides support for several Unit Test frameworks. Take a second to review this information here: <a href="https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics">https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics</a>
+                  </p>
+                  <p>Once you've read up on the Tools and Processes associated with Unit Tests, create two Unit Tests for the Perimeter and Area properties, respectively.  Use the Test Explorer Window to execute your Unit Tests: <a href="https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer">https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer</a>
+                  </p>
+                    
+                  <h2>What Next?</h2>
+                  <p>
+                      The previous exercises provide a brief overview of some of the language concepts and capabilities of the C# programming language, as well as a few of the classes and methods within the .NET Framework. These concepts will provide an excellent foundation as you develop applications on the following technologies:
+                      
+                        
+                  </p>
+                  <dl>
+                      <dt>Game Programming With Unity 3D</dt>
+                      <dd><a href="https://unity3d.com/learn/tutorials/topics/scripting/coding-unity-absolute-beginner">https://unity3d.com/learn/tutorials/topics/scripting/coding-unity-absolute-beginner</a></dd>
+                      <dt>Universal Windows Platform Applications</dt>
+                      <dd><a href="https://docs.microsoft.com/en-us/windows/uwp/get-started/your-first-app">https://docs.microsoft.com/en-us/windows/uwp/get-started/your-first-app</a></dd>
+                      <dt>Android, iOS, and Windows Applications</dt>
+                      <dd><a href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio">https://docs.microsoft.com/en-us/visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio</a></dd>
+                      <dt>Web Applications</dt>
+                      <dd><a href="https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-aspnet-core">https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-aspnet-core</a></dd>
+                  </dl>
+                  <h2>More Practice</h2>
+                  <p>In many cases, so of those guides can still be a bit of a challenge, and you might want to spend more time solving simpler problems to build up your programming accumen. To that end, we recommend joining CodeWars: <a href="https://www.codewars.com/join">https://www.codewars.com/join</a>. Join the Coding Temple clan in your account settings to see how you stack up against other classmates.</p>
+                  
               </div>
           </div>
           
