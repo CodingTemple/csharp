@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+    <title>DotNet PreWork - Coding Temple</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">DotNet Prework</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/week1/">Week 1</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/week2/">Week 2<span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/week3/">Week 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="/next/">What's Next</a></li>
+      
+    </ul>
+  </div>
+</nav>
+      <main class="container">
+          <div class="row">
+              <div class="col">
+                
+                  <h2>Videos to Watch - Week 2 : Part 1</h2>
+                  <ol>
+                      <li>Understanding	Arrays</li>
+                      <li>Creating	and	Calling	Methods</li>
+                      <li>While	Iterations	statement</li>
+                      <li>Working	with	Strings</li>
+                      <li>Working	with	Date	and	time</li>
+                      <li>Understanding	Classes</li>
+                      <li>More	About	Classes	and	Methods</li>
+                  </ol>
+                  <h2>Problems - Week 2 : Part 1</h2>
+                  <p>
+                      For	problems	1	to	7,	you	will	write	a	method	within	a	class	called	program	and	call those	methods	with	predetermined	values	within	the	main	function.	e.g.
+                  </p>
+                  <code>
+                      <pre>
+using System;
+
+namespace MyProgram	
+{
+    public class Program	
+    {	
+        static void Main(string[] args)
+        {
+            string	value = MyMethod();//	You	will call the method in main
+            Console.WriteLine(value);	
+        }	
+
+        //You will define the method in the class. 
+        //For now, it doesn't matter if it is public or private
+
+        private static string MyMethod()
+        {
+            return "Hello World!";
+        }
+    }	
+}
+                      </pre>
+                  </code>
+                  <h3>Problem 1</h3>
+                  <p>
+                      Write	a	function	that	takes	2	integers	as	its	parameters	(arguments)	and	returns	(not print)	the	sum	of	them.	Here	is	template:
+                  </p>
+                  <code>
+                      <pre>
+public class Program	
+{	
+    static void Main(string[] args)
+    {
+        int number = Sum(2,3);	
+        Console.WriteLine(number);	
+        Console.ReadLine();
+    }	
+
+    public static int Sum(int a, int b)
+    {
+        //code goes here
+    }
+}	
+                      </pre>
+                  </code>
+                  <h3>Problem 2</h3>
+                  <p>Write	a	method	that	takes	2	strings	and	returns	a	boolean	value	depending	on	whether	they	are	equal	or	not.</p>
+                  <h3>Problem 3
+                  </h3>
+                  <p>
+                      Write	a	method	that	takes	one	string	(someone's	name),	and	appends	it	to	the string:	"Hello " and prints	it.	Example: if	the	name	passed	in	is	Coding	Temple.	It	will print "Hello Coding Temple"
+                  </p>
+                  <h3>Problem 4</h3>
+                  <p>
+                      Write	a	method	that	takes	an	array	and	returns	the	sum.
+                  </p>
+                  <h3>Problem 5</h3>
+                  <p>
+                      Write	a	method	that	that	takes	3	parameters	(string,	int,	char),	it	will	return	a	new	string	with	new	letter	at	position	given	by	parameter.
+                  </p>
+                  <code>
+                      ChangeChar("Hello",	1,	'a'); // will return "Hallo"	
+                  </code>
+                  <h3>Problem 6</h3>
+                  <p>
+                      Write	a	method	that	will	take	two	integers	and	will	return	the	first	integer	to	the	power	of	the	second	integer.	
+                  </p>
+                  <code>
+                    Power(2,3);	//this	should	return	8
+                  </code>
+                  <h3>Problem 7</h3>
+                  <p>Write	a method that will take	an array of integers and return	the	greatest value in that array.</p>
+                  <p>
+                  <code>
+                      int[] numbers = {24, 13, 27, 8};<br>
+                      Greatest(numbers);	//this	should	return	27
+                  </code>
+                <h2>Videos to Watch - Week 2 : Part 2</h2>
+                  <ol>
+                      <li>Working	with	Date	and	time</li>
+                      <li>Understanding	Classes</li>
+                      <li>More	About	Classes	and	Methods</li>
+                  </ol>
+                  <h2>Problems - Week 2 : Part 2</h2>
+                  <h3>Problem 8</h3>
+                  <p>Create	a	class	called	Person. Give	it	the	following	properties:</p>
+                  <ul>
+                    <li>Age (int)</li>
+                    <li>Name (string)</li>
+                    <li>Gender (string)</li>
+                  </ul>
+                  <p>Give it a method called Birthday, which causes the Age to increase by 1.</p>
+                  <p>In your Main method, create an instance of Person, assign a value to each of the properties, and invoke the Birthday method.</p>
+                  <code>
+                      <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Person p1 = new	Person();
+        p1.Name	= "Frank";
+        p1.Age = 30;
+        p1.Gender = "Male";
+        p1.Birthday();
+        Console.WriteLine(p1.Age);  //Should print out 31;
+    }	
+}
+                      </pre>
+                  </code>
+                  <h3>Problem 9</h3>
+                  <p>
+                      Create a class called	Vehicle. Give it the following properties:	
+                  </p>
+                  <ul>
+                      <li>Make (string)</li>
+                      <li>Model (string)</li>
+                      <li>Year (int)</li>
+                      <li>Color (string)</li>
+                      <li>Miles (decimal)</li>
+                  </ul>
+                  <p>Give it the following methods:</p>
+                  <dl>
+                      <dt>Drive</dt>
+                      <dd>Takes a parameter of type decimal, and adds that value to the Miles property.  Returns void.</dd>
+                      <dt>IsNew</dt>
+                      <dd>Takes no parameters, and returns a True if the Year property is equal to the current year, false otherwise.</dd>
+                  </dl>
+                  <!--<p>For the purposes of this assignment, we	will	limit	our	set	of	"makes"	to	the	following: GM, Ford, Lincoln, Chrysler, Cadillac, Jeep, Tesla, Nissan, Mitsubishi, Infiniti, Honda, Toyota, MercedesBenz, Audi, BMW, Volkswagen</p>-->
+                  <p>
+                      Create	an	instance	of	Vehicle	in the Main method	(in	Program	class)	and	assign a value to each of the properties of	that instance a value.  Invoke both methods to see the result
+                  </p>
+                <code>
+                    <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Vehicle v1 = new Vehicle();
+        v1.Make	= "Ford";
+        v1.Model = "T";
+        v1.Color = "Brown";
+        v1.Miles = 1000m;
+        v1.Year = 1925;
+        
+        Console.WriteLine(v1.IsNew());  //Should print out false;
+        v1.Drive(100);
+        Console.WriteLine(v1.Miles); //Should print out 1100;
+    }	
+}
+                    </pre>
+                  </code>
+                  <h3>Problem 10</h3>
+                  <p>Create	a	class	called	Point. Give	it	the	following	properties:</p>
+                  <ul>
+                      <li>X (decimal)</li>
+                      <li>Y (decimal)</li>
+                  </ul>
+                  <p>Give it the following methods:</p>
+                  <dl>
+                      <dt>Point</dt>
+                      <dd><b>Constructor</b> which takes two arguments, x and y, of type decimal, and assigns them to the X and Y properties</dd>
+                      <dt>Distance</dt>
+                      <dd>non-static method which takes a Point as a parameter, and returns a decimal for the distance</dd>
+                  </dl>
+                  <p><img class="img-fluid" src="http://i.imgur.com/UK46xKd.jpg" />
+                  </p>
+                  
+                  <code>
+                    <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Point a = new Point(22.5, -6.2);
+        Point b = new Point(0.0, 10);
+        decimal calculatedDistance = a.Distance(b);
+        
+        Console.WriteLine(calculatedDistance); 
+    }	
+}
+
+public class Point
+{
+    public Point(decimal x, decimal y)
+    {
+        //Assign properties here
+    }
+    
+    public decimal Distance(Point that)
+    {
+        //Use the distance formula here. 
+        //You can access one point using "that" parameter, and the other point using the "this" object.
+    }
+}
+
+                    </pre>
+                  </code>
+                  <h3>Problem 11</h3>
+                  <p>Create	a	class	called	Employee. Give it the following	properties:</p>
+                  <ul>
+                      <li>Name (string)</li>
+                      <li>DateOfBirth (DateTime)</li>
+                      <li>JobTitle (string)</li>
+                      <li>Salary(decimal)</li>
+                      <li>Count (int, mark this as static)</li>
+                  </ul>
+                  <p>Create the following special methods, referred to as <emphasis>Overloaded Constructors</emphasis></p>
+                  <dl>
+                      <dt>Employee(string name, DateTime dateOfBirth)</dt>
+                      <dd>Assigns the name and dataOfBirth parameters to the properties, assigns JobTitle the value of "", and Salary the value of -1;</dd>
+                      <dt>Employee(string name, DateTime dateOfBirth, string jobTitle, decimal salary)</dt>
+                      <dd>Assigns all four parameter values to the appropriate properties</dd>
+                      <dt>Employee()</dt>
+                      <dd>Defaults the property values to "" for name and jobTitle, -1 for salary, and DateTime.Now for dateOfBirth.</dd>
+                  </dl>
+                  <p>Every time an Employee is created, increment the Employee.Count property by 1.</p>
+                  
+                  <p>Create three instances of an employee object using the different constructors</p>
+                                    <code>
+                    <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Employee a = new Employee("Sally", new DateTime(1972, 3, 15), "CEO", 120000m);
+        Employee b = new Employee("Bill", new DateTime(1981, 1, 16));
+        Employee c = new Employee();
+        Console.WriteLine(Employee.Count);  //Should print 3 
+    }	
+}
+
+
+
+                    </pre>
+                  </code>
+                  <h3>Problem 12</h3>
+                  <p>
+                      We're going to expand on Problem 9.  In addition to the Vehicle class you had previously created, create a new Class, Car, which <em>Inherits</em> from Vehicle, by defining the class as follows:
+                  </p>
+                  <code>
+                      public class Car : Vehicle<br>
+                      {<br>
+                      <br>
+                      }<br>
+                  </code>
+                  <p>In addition to the Car class, create a Truck class which also inherits from Vehicle. Create an instance of each new class inside your main method, and assign properties to the Make, Model, Year, Color, and Miles of each. Notice that you don't need to re-define these properties on Car and Truck.  As these classes inherit from Vehicle, they already have all of the public methods and properties that vehicle has.</p>
+                  <code>
+                  <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Car c = new Car();
+        c.Color = "Yellow";
+        
+        Truck t = new Truck();
+        t.Miles = 100;
+    }	
+}
+                  </pre>
+                  </code>
+                  <p>
+                      <h3>Problem 13</h3>
+                  <p>
+                      Create a class called	Animal.  Give it the following properties:
+                  </p>
+                  <ul>
+                      <li>Name (string)</li>
+                      <li>Dirty (bool)</li>
+                  </ul>
+                  <p>Give it the following methods:</p>
+                  <dl>
+                      <dt>Animal(string name)</dt>
+                      <dd>A constructor which takes the name and assigns it to the Name property.</dd>
+                      <dt>Speak()</dt>
+                      <dd>A method which returns a string</dd>
+                  </dl>
+                  <p>Create two additional classes, Cat and Dog which inherit from Animal.  Notice that because Animal's constructor takes a parameter, Dog and Cat need constructors which can call the Animal constructor.  e.g.</p>
+                  <code>public class Dog<br>{<br>public Dog(string name) : base(name) {}<br>}<br></code>
+                  <p>Create a static method in your program class called WashTheAnimal, which takes a parameter of type Animal.  In your Main method, create an instance of Dog and Cat, and pass each of them to the WashTheAnimal method</p>
+                  <code>
+                  <pre>
+public class Program
+{
+    static void	Main(string[] args)
+    {
+        Dog d = new Dog("Harry");
+        d.Dirty = true;
+        
+        Cat c = new Cat("Larry");
+        c.Dirty = true;
+        
+        WashTheAnimal(d);
+        WashTheAnimal(c);
+    }	
+    
+    private static void WashTheAnimal(Animal a)
+    {
+        a.Dirty = false;
+        Console.WriteLine(a.Name + " is clean");
+    }
+}
+                  </pre>
+                  </code>
+                  <p>Notice that I don't need to write two versions of "WashTheAnimal" for cats and dogs.  Since both classes inherit from Animal, instances of dogs and cats are valid arguments for methods which expect Animals. This technique is important, because it saves you from having to write duplicate code for each inheriting class. This concept is referred to as Polymorphism</p>
+                  <h3>Problem 14</h3>
+                  <p>Create	a class	called BankAccount, give it the following properties:
+                  </p>
+                  <ul>
+                      <li>AccountNumber (string)</li>
+                      <li>Owner (string)</li>
+                      <li>Balance (decimal)</li>
+                  </ul>
+                  <p>Give it the following Methods</p>
+                  <dl>
+                      <dt>BankAccount(string accountNumber, string	owner, decimal balance)</dt>
+                      <dd>A constructor which assigns each parameter to the appropriate property.</dd>
+                      <dt>BankAccount(string accountNumber, string	owner)</dt>
+                      <dd>A constructor which assigns the accountNumber and owner properties, but default balance to 0</dd>
+                      <dt>Withdraw(decimal amount)</dt>
+                      <dd>Updates balance by subtracing the amount parameter to the balance.</dd>
+                      <dt>Deposit(decimal amount)</dt>
+                      <dd>Updates the balance by adding the amount parameter to the balance.</dd>
+                      <dt>AddInterest()</dt>
+                      <dd>This will be used to update the balance with a compound interest rate.  In the "BankAccount" base class, we'll leave this method empty</dd>
+                  </dl>
+                  <p>We'll be using a new C# keyword, <em>virtual</em>, as a modifier on the Withdraw, Deposit, and AddInterest methods. The method signature will look like this:</p>
+                  <code>public virtual void AddInterest()</code>
+                  <p>Create two classes, CheckingAccount and SavingsAccount, which inherit from BankAccount. CheckingAccount and SavingsAccount need two constructors each, which in turn will call the BankAccount constructors, as we did in Problem 13.</p>
+                  <p>While BankAccount provides an implementation for Deposit, Withdraw, and AddInterest, by marking them as virtual, you are allowed to <em>override</em> the default implementations in derived classes.  Use the override keyword to do so:</p>
+                  <code>public override void Deposit()</code>
+                  <p>Override the withdraw method in both classes, and make sure that someone cannot withdraw more money than is present in their account.  Futhermore, in the SavingsAccount, make that someone cannot withdraw more than 10% of their current balance. </p>
+                  <code>if(amount > (this.Balance * 0.10))</code>
+                  <p>In the SavingsAccount, override the AddInterest method so that the balance is increased by 0.2% when the method is called.</p>
+                      
+                 <p>
+                  
+                  <a class="btn btn-primary btn-block" href="/week3/">Continue to Week 3</a>
+              </div>
+          </div>
+          
+          
+    
+          
+
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+

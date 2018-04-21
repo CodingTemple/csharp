@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+    <title>DotNet PreWork - Coding Temple</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">DotNet Prework</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/week1/">Week 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="/week2/">Week 2</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/week3/">Week 3<span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/next/">What's Next</a></li>
+      
+    </ul>
+  </div>
+</nav>
+      <main class="container">
+          <div class="row">
+              <div class="col">
+                <h2>Videos to Watch - Week 3</h2>
+                  <ol>
+                      <li>Understanding	Scope and Accessibility	Modifiers</li>
+                      <li>Understanding	Namespaces and Working with the .NET Class Library</li>
+                      <li>Creating and Adding References to Assemblies</li>
+                      <li>Working with Collections</li>
+                      <li>Working with LINQ</li>
+                      <li>Enumerations and the Switch Decision Statement</li>
+                      <li>Gracefully Handling Exceptions</li>
+                      <li>Understanding	Events and Event-Driven	Programming</li>
+                      <li>(Optional) Where to Go From Here</li>
+                  </ol>
+                  <h2>Problems - Week 3</h2>
+                  <h3>Problem 1</h3>
+                  <p>Create	a console application. Notice that the Program class is created inside of the Namespace which matches the name of our project. Create two additional classes, each called Person, but create one inside of a namespace <em>ns1</em>, while the other will be inside of a namespace <em>ns2</em>.  Each person class should have a single method, Print, which prints out "I am from ns2" in the ns2 namespace, and "I am from ns1" inside the ns1 namespace.</p>
+                  <p>In the Main method of your program class, create an instance of each type of Person and call the Print method.</p>
+                  <code>
+                      <pre>
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        ns1.Person person1 = new ns1.Person();
+        ns2.Person person2 = new ns2.Person();
+        person1.Print();
+        person2.Print();
+        Console.ReadLine();
+    }
+}
+                      </pre>
+                  </code>
+                      <h3>Problem 2</h3>
+                  <p>
+                      We're going to modify our Week 2 : Problem 11 program to make our Employee class part of a Human Resources Payroll system. We'll make a slight change to the existing employee class.  Instead of "Salary" being marked as a public property, we're going to modify it using the Private keyword access modifier:
+                  </p>
+                  <code>private decimal Salary {get; set;}</code>
+                  <p>By marking the salary property private, only methods and properties defined inside of the Employee class can change the Salary property. You can read more about access modifiers here: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers">https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers</a>
+                  </p>
+                  <p>We'll be adding two other methods to our employee class:</p>
+                  <dl>
+                      <dt>Dispense()
+                      </dt>
+                      <dd>Returns a decimal of the Salary divided by 26.  This is the bi-monthly paycheck amount the employee receives.</dd>
+                      <dt>Promote(decimal additionalPay, string newJobTitle)</dt>
+                      <dd>
+                          Adds an amount to an employee's salary, and changes their job title.
+                      </dd>
+                  </dl>
+                  <p>Here's some barebones code of our new HR System:</p>
+                  <code>
+                      <pre>
+using System;
+using System.Collections.Generic;  //I need this to use List&lt;Employee&gt; instead of Employee[]
+
+public class Program
+{
+    public static void Main()
+    {
+        List&lt;Employee&gt; employees = new List&lt;Employee&gt;;
+        employees.Add(new Employee("Rick", new DateTime(1981, 1, 16), "Software Engineer", 65000m));
+        employees.Add(new Employee("Tina", new DateTime(1978, 7, 4), "Senior Software Engineer", 85000m));
+        employees.Add(new Employee("Chris", new DateTime(1993, 2, 13), "Associate Software Engineer", 55000m));
+        employees.Add(new Employee("Mindy", new DateTime(1996, 8, 3), "Chief Technology Officer", 155000m));
+        
+        foreach(Employee employee in employees)
+        {
+            Console.WriteLine(employee.Dispense());
+        }
+        
+        //employee[0].Salary = 1000000000m  //This doesn't compile
+        employee[2].Promote(10000m, "Software Engineer");   //But this does
+        
+        Console.ReadLine();
+    }
+
+}
+                      </pre>
+                      </code>
+                  <p>
+                      While this is an oversimplified example of how developers use the private keyword, in practice it forces us to interact with code through a well-defined contract.  This is the principal of <em>Encapsulation.</em>
+                  </p>
+                  <h3>Problem 3</h3>
+                  <p>We're going to re-write Week 1 - Problem 9 to use the "switch" keyword".  Here's an implementation of the Problem to start with:</p>
+                  <code>
+                      <pre>
+                      
+Console.WriteLine("Enter your score");
+string input = Console.ReadLine();
+int grade = int.Parse(input);
+int leadingDigit = grade / 10;
+
+if(leadingDigit == 10)
+{
+    Console.WriteLine("A");
+}
+else if(leadingDigit == 9)
+{
+    Console.WriteLine("A");
+}
+else if(leadingDigit == 8)
+{
+    Console.WriteLine("B");
+}
+else if(leadingDigit == 7)
+{
+    Console.WriteLine("C");
+}
+else if(leadingDigit == 6)
+{
+    Console.WriteLine("D");
+}
+else
+{
+    Console.WriteLine("F");
+}
+                      </pre>
+                  </code>
+                  <p>Change the if/else block to use the switch, case, default, and break keywords.</p>
+                  <h3>Problem 4</h3>
+                  <p>
+                      We're going to modify our Week 2 - Problem 9 to enforce some additional rules about our Vehicle.  For the purposes of this exercise, we want to limit our set of "makes" to the following: GM, Ford, Lincoln, Chrysler, Cadillac, Jeep, Tesla, Nissan, Mitsubishi, Infiniti, Honda, Toyota, MercedesBenz, Audi, BMW, Volkswagen.  Rather than marking the Make property as a string, we're going to use an Enum structure to create this restriction. Add the following code to your project:</p>
+                  <code>
+                      <pre>
+public class Program
+{
+    public static void Main()
+    {
+        Vehicle v1 = new Vehicle();
+        v1.Make	= "Ford";   //This line is going to need to change
+        v1.Model = "T";
+        v1.Color = "Brown";
+        v1.Miles = 1000m;
+        v1.Year = 1925;
+        
+    }
+    
+}
+
+public class Vehicle
+{  
+    //...Your existing code should still be in here
+    public VehicleMake Make { get; set;}
+
+}
+
+public enum VehicleMake
+{
+    GM, 
+    Ford, 
+    Lincoln, 
+    Chrysler, 
+    Cadillac, 
+    Jeep, 
+    Tesla, 
+    Nissan, 
+    Mitsubishi, 
+    Infiniti, 
+    Honda, 
+    Toyota, 
+    MercedesBenz, 
+    Audi, 
+    BMW, 
+    Volkswagen
+}
+                      </pre>
+                  </code>
+                  <p>
+                      
+                      Using the supplied code, modify the Program's Main method so that the Make is set correctly.  Visual Studio's IntelliSense capability should "suggest" the correct way to write this.
+                  </p>
+                  <h3>Problem 5</h3>
+                  <p>
+                      We're going to re-run our Week 1 : Problem 3 code, but pass in some different parameters:
+                  </p>
+                  <code>
+                      <pre>
+Console.WriteLine("Enter a number");
+string input = Console.ReadLine();
+int a = int.Parse(input);
+
+
+Console.WriteLine("Enter another number");
+input = Console.ReadLine();
+int b = int.Parse(input)
+
+Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+Console.WriteLine("{0} mod {1} = {2}", a, b, a % b);
+
+Console.ReadLine();
+                      </pre>
+                  </code>
+                  <p>
+                      What happens if you enter the value "0" for your second parameter?  Alternatively, what happens if you type "hot dogs" instead of a number? In either case, this will cause what is referred to as an <em>exception</em>, sometimes referred to as a <em>runtime error</em>. Even though your code compiled, the user was able to enter input which your code did not expect. Professional developers are expected to practice <a href="https://en.wikipedia.org/wiki/Defensive_programming">defensive programming</a> to guard against this. In C#, an unhandled exception or runtime error will immediately terminate execution of the program, so as to avoid executing code which is in an unexpected state and causing undesirable side effects to your system.
+                  </p>
+                  <p>
+                      One of the basic techniques to harden your code against these sort of situations is to introduce some basic exception handling structures in your code:
+                  </p>
+                  <code>
+                      <pre>
+int a = 20;
+int b = 10;
+int c = 0;
+
+try
+{
+    int result1 = a / b;
+}
+catch(Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
+try
+{
+    int result2 = a / c;
+}
+catch(System.DivideByZeroException ex)  //This will only catch "DivideByZeroException" objects
+{
+    Console.WriteLine(ex.Message);
+}
+
+                        
+                      </pre>
+                  </code>
+                  <p>
+                      Modify the problem above to handle passing 0 as the second number. If you're feeling ambitious, try handling the int.Parse exception that occurs when a user types in something that isn't a number, as well.
+                  </p>
+                  <h3>Problem 6</h3>
+                  <p>
+                      Take a look at the following code:
+                      <code>
+                      <pre>
+                      
+public class Rectangle
+{
+    //The underscore is a "style guideline"
+    //but has no effect on how this compiles or runs.
+    private double _length;     
+    private double _width;
+
+    public Rectangle(double length, double width)
+    {
+        _length = length;
+        _width = width;
+    }
+    
+    public double Perimeter
+    {  
+        get
+        {
+            return 0;   //This isn't correct
+        }
+        
+    }
+    
+    public double Area
+    {
+        get
+        {
+            return 0;   //Neither is this
+        } 
+    }
+}
+                </pre>
+                      </code>
+                          
+                      
+                      <p>In this case, we don't supply a way to set Area or Perimeter, since these values are derived from the length and width.  Notice that the Perimeter and Area methods don't return the correct values:</p>
+                        <code>Rectangle r = new Rectangle(4, 5);<br>Console.WriteLine(r.Area); //Should be 20, but prints 0</code>
+                  <p>This is an interesting example of code which compiles, runs without generating any exceptions, but is functionally incorrect. While you might notice this if you spent some time looking at the code, these sorts of defects are often much more subtle.  To improve the quality of code, professional developers rely on automated <em>Unit Tests</em> to verify that their code not only compiles, but functionally works as expected</p>
+                  <p>Visual Studio provides support for several Unit Test frameworks. Take a second to review this information here: <a href="https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics">https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics</a>
+                  </p>
+                  <p>Once you've read up on the Tools and Processes associated with Unit Tests, create two Unit Tests for the Perimeter and Area properties, respectively.  Use the Test Explorer Window to execute your Unit Tests: <a href="https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer">https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer</a>
+                  </p>
+                    
+                  <a class="btn btn-primary btn-block" href="/next/">Continue to What's Next</a>
+              </div>
+          </div>
+          
+          
+    
+          
+
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
